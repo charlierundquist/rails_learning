@@ -61,7 +61,7 @@ Rails.application.configure do
   config.action_mailer.raise_delivery_errors = true
 
   # Specify outgoing SMTP server. Remember to add smtp/* credentials via bin/rails credentials:edit.
-  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.delivery_method = :resend
 
   # set smtp settings
   config.action_mailer.smtp_settings = {
