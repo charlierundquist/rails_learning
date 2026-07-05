@@ -39,7 +39,10 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: "testing.charlierundquist.com" }
 
   # Specify outgoing SMTP server. Remember to add smtp/* credentials via bin/rails credentials:edit.
-  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.delivery_method = :resend
+  config.action_mailer.resend_settings = {
+    api_key: "re_8YuLfSD6_MoLmuzTmty27KYmkoc2R4fpA"
+  }
   config.action_mailer.smtp_settings = {
     user_name: Rails.application.credentials.dig(:smtp, :user_name),
     password: Rails.application.credentials.dig(:smtp, :password),
